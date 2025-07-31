@@ -11,6 +11,9 @@ bio_data = pd.read_csv(r"data/anthropometric_trait_gwas.csv")
 
 st.set_page_config(page_title="GENETIC MAKEUP HEALTH RISK INIDICATOR", layout="wide")
 
+# get all the features but exclude snp columns
+snp_columns = [col for col in bio_data.columns if col.startswith('SNP_')]
+bio_data = bio_data.drop(columns=snp_columns, errors='ignore')
 features_set = bio_data.columns.tolist()
 
 
