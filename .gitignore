@@ -22,5 +22,5 @@ Data/
 *.pkl
 # Ignore only log and temporary txt files, not all .txt files
 logs/*.txt
-temp*.txt
+
 *.~
