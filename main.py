@@ -9,6 +9,14 @@ from sklearn.preprocessing import StandardScaler
 
 bio_data = pd.read_csv(r"data/anthropometric_trait_gwas.csv")
 
+st.set_page_config(page_title="GENETIC MAKEUP HEALTH RISK INIDICATOR", layout="wide")
+
+
+st.table(f"Sample Table of the data used to train the model", bio_data.head())
+st.markdown("""
+Your table should have all the features:""")
+
+
 bmi_mean = bio_data['BMI'].mean()
 bmi_std = bio_data['BMI'].std()
 
