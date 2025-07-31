@@ -13,10 +13,8 @@ st.set_page_config(page_title="GENETIC MAKEUP HEALTH RISK INIDICATOR", layout="w
 
 # get all the features but exclude snp columns
 snp_columns = [col for col in bio_data.columns if col.startswith('SNP_')]
-bio_data = bio_data.drop(columns=snp_columns, errors='ignore')
-features_set = bio_data.columns.tolist()
-
-
+sample_bio_data = bio_data.drop(columns=snp_columns, errors='ignore')
+features_set = sample_bio_data.columns.tolist()
 
 
 
