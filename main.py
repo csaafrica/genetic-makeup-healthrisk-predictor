@@ -41,7 +41,7 @@ st.markdown("Upload a CSV file with the required features to predict BMI.")
 
 st.markdown(f"Your table should have all the features: {', '.join(features_set)}, including SNPS from SNP_1 to SNP_1000.")
 st.markdown(f"---Here is a sample of the data used to train the model---")
-st.table(bio_data.head())
+#st.table(bio_data.head())
 
 uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 
