@@ -41,7 +41,7 @@ all_snps = [f"SNP_{i}" for i in range(1, 1001)]  # SNP_1 to SNP_1000
 st.title("BMI Predictor App")
 st.markdown("Upload a CSV file with the required features to predict BMI.")
 
-st.markdown(f"Your table should have all the features: {', '.join(features_set)}")
+st.markdown(f"Your table should have all the features: {', '.join(features_set)}, including SNPS from SNP_1 to SNP_1000.")
 
 uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 
