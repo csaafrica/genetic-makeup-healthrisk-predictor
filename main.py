@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 
 
 
-bio_data = pd.read_csv("data/bio_data.csv")
+bio_data = pd.read_csv(r"data/anthropometric_trait_gwas.csv")
 
 bmi_mean = bio_data['BMI'].mean()
 bmi_std = bio_data['BMI'].std()
