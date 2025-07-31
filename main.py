@@ -11,12 +11,11 @@ bio_data = pd.read_csv(r"data/anthropometric_trait_gwas.csv")
 
 st.set_page_config(page_title="GENETIC MAKEUP HEALTH RISK INIDICATOR", layout="wide")
 
+features_set = bio_data.columns.tolist()
 
 
-st.markdown("""
-Your table should have all the features:
-            
-        """)
+
+
 
 bmi_mean = bio_data['BMI'].mean()
 bmi_std = bio_data['BMI'].std()
@@ -38,6 +37,8 @@ all_snps = [f"SNP_{i}" for i in range(1, 1001)]  # SNP_1 to SNP_1000
 # --- App Interface ---
 st.title("BMI Predictor App")
 st.markdown("Upload a CSV file with the required features to predict BMI.")
+
+st.markdown(f"Your table should have all the features: {', '.join(features_set)}")
 
 uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 
