@@ -1,0 +1,3 @@
+[runner]
+# Choose a Python version known to be compatible with your libraries
+python_version = "3.11" # Or "3.12" if you prefer
