@@ -5,6 +5,8 @@ import joblib
 from sklearn.preprocessing import StandardScaler
 
 
+
+
 bio_data = pd.read_csv(r'C:\Users\ryanj\Desktop\CSA2025\data\anthropometric_trait_gwas.csv')
 
 bmi_mean = bio_data['BMI'].mean()
